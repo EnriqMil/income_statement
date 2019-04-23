@@ -1,0 +1,29 @@
+import math
+def income_statement():
+    global income
+    global expenditure
+    global result
+    global month
+    month=input('introduce period: ')
+    income=float(input('Introduce your income of this month: '))
+    expenditure= float(input('Introduce your gatos  of this month: '))
+    result=income-expenditure
+    if result<0:
+        print('Result is negative: {}'.format(result,font='red'))
+    else:
+        print('Result is: {}'.format(result))
+
+def debit_credit():
+    print('The period is: {}'.format(month))
+    if result<0:
+        profit=0
+        loss=abs(result)
+        print('Debit         Credit\n------------------\n {}        {}\n {}           {}'.format(expenditure, income, profit, loss))
+    else:
+        profit=result
+        loss=0
+        print('Debit         Credit\n------------------ \n{}        {}\n {}          {}'.format(expenditure, income, profit, loss))
+
+
+income_statement()
+debit_credit()
